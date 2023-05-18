@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baoiam</title>
+    <link rel="icon" href="icon.png" type="image/jpeg">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="utility.css">
+
+    <!-- slick css -->
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css">
+    <!-- bootstrap for sliding-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--cdn animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha512-doJrC/ocU8VGVRx3O9981+2aYUn3fuWVWvqLi1U+tA2MWVzsw+NVKq1PrENF03M+TYBP92PnYUlXFH1ZW0FpLw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        :root {
+    --yellow: #e3d810;
+    --magenta: #d9138a;
+    --cyan: #12a4d9;
+    --black: #322e2f;
+    --lightBlack: #a29a9c;
+    --exLight: #f4f3f3;
+    --transition: all 0.4s ease-in-out;
+    --Heebo: 'Heebo', sans-serif;
+    --Roboto: 'Robot', sans-serif;
+}
+
+.box-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: auto;
+    border-radius: 4px;
+    background-color: white;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    transition: .3s;
+}
+
+.img-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    border: 6px solid #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    padding: 20px;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+.single-box:nth-child(1) .img-area {
+    background-image: url(1.jpg);
+}
+
+.single-box:nth-child(2) .img-area {
+    background-image: url(2.jpg);
+}
+
+.single-box:nth-child(3) .img-area {
+    background-image: url(https://theproductmanager.b-cdn.net/wp-content/uploads/sites/4/2021/05/Product-Management-Roles-and-Responsibilities-Featured-image-800x800.png);
+}
+
+.single-box:nth-child(4) .img-area {
+    background-image: url(https://media.istockphoto.com/id/1325034866/vector/data-analysis-vector-illustration-with-young-woman-sitting-in-front-of-big-computer-monitor.jpg?s=612x612&w=0&k=20&c=n5-pe8pgPfPMcRpOL8bpy6mcx-LHrxLs2sYX1vJ9smM=);
+}
+
+.single-box:nth-child(5) .img-area {
+    background-image: url(https://img.freepik.com/free-vector/artificial-intelligence-illustration_33099-584.jpg?w=2000);
+}
+
+.single-box:nth-child(6) .img-area {
+    background-image: url(https://thumbs.dreamstime.com/b/creative-content-writing-blogging-post-digital-media-flat-illustration-creative-content-writing-blogging-post-digital-media-flat-109016504.jpg);
+}
+
+.single-box:nth-child(7) .img-area {
+    background-image: url(https://leverageedu.com/blog/wp-content/uploads/2019/11/Diploma-in-Business-Management.png);
+}
+
+.single-box:nth-child(8) .img-area {
+    background-image: url(https://www.slajobs.com/wp-content/uploads/2023/01/software-testing-course.jpg);
+}
+
+.header-text {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.img-text {
+    font-family: var(--Roboto);
+    padding-top: 20px;
+}
+
+.img-text p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.single-box:hover {
+    background: darkorange;
+    color: whitesmoke;
+}
+
+* {
+    font-family: var(--Heebo);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--Heebo);
+    line-height: 1.5;
+    font-size: 1.05rem;
+    text-rendering: optimizeLegibility;
+    color: var(--black);
+}
+
+
+/* header */
+
+header {
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.navbar-nav a {
+    color: #e6cad1ad;
+}
+
+.navbar-nav a.nav-link {
+    font-size: 20px;
+    font-family: var(--Roboto);
+    font-weight: 30px;
+}
+
+.header-top-info {
+    background: var(--black);
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0.6rem 0;
+}
+
+.header-top-info .row {
+    margin: 0 auto;
+}
+
+.header-top-info .row div:first-child span {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.header-top-info .row div:first-child span .fas {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.header-top-info .btn {
+    margin-right: 0.5rem;
+}
+
+.login-btn {
+    background: var(--cyan);
+    border-radius: 3rem;
+    width: 120px;
+    border: 2px solid var(--cyan)!important;
+    color: #fff;
+    transition: var(--transition);
+}
+
+.register-btn {
+    background: transparent;
+    border: 2px solid var(--cyan)!important;
+    border-radius: 3rem;
+    width: 120px;
+    color: var(--cyan);
+    transition: var(--transition);
+}
+
+.bg-light {
+    background-color: transparent!important;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 300px;
+}
+
+.center {
+    padding: 70px 0;
+    border: 3px solid orange
+}
+
+.carousel-caption {
+    bottom: 220px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 0;
+    font-family: var(--Roboto);
+}
+
+.carousel-caption h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: rgba(250, 99, 44, 0.858);
+    flex: 1;
+    text-align: center;
+    font-size: 100px;
+}
+
+.carousel-caption p {
+    width: 60%;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.9;
+    text-align: center;
+    color: darkslateblue;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.35;
+}
+
+.carousel-inner a {
+    text-transform: uppercase;
+    text-decoration: none;
+    background: darkorange;
+    padding: 10px 30px;
+    display: inline block;
+    color: black;
+    margin-top: 15px;
+}
+
+.carousel-inner p,
+h5 {
+    color: black;
+}
+
+.login-btn:hover {
+    background: transparent;
+    color: darkorange;
+}
+
+.register-btn:hover {
+    background: var(--cyan);
+    color: #fff;
+}
+
+.navbar-brand img {
+    width: 170px;
+    margin: 0 auto;
+}
+
+.navbar-brand span {
+    font-family: var(--Roboto);
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.navbar-show-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+
+/* *** */
+
+.showNavbar {
+    transform: translateX(0);
+}
+
+.navbar-nav {
+    padding: 0;
+}
+
+.navbar-nav li a {
+    color: black!important;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.navbar-nav li a:hover {
+    padding-left: 1rem;
+    color: var(--black)!important;
+}
+
+
+/* *** */
+
+.hero-content {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-slider {
+    padding: 2rem 0;
+}
+
+.herot-title {
+    font-family: var(--Roboto);
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.hero-content .text {
+    padding-bottom: 1rem;
+}
+
+.hero-btn {
+    background: orange;
+    color: #fff;
+    transition: var(--transition);
+    width: 140px;
+    border-radius: 5px;
+}
+
+.hero-btn:hover {
+    background: wheat;
+}
+
+
+/* welcome */
+
+.welcome {
+    background: linear-gradient(rgb(250, 83, 0), orange);
+}
+
+.welcome .row>div:first-child {
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.welcome .item {
+    text-align: center;
+}
+
+.welcome .item span {
+    font-size: 2.6rem;
+}
+
+.welcome .item:nth-child(1) span {
+    color: var(--cyan);
+}
+
+.welcome .item:nth-child(2) span {
+    color: var(--magenta);
+}
+
+.welcome .item:nth-child(3) span {
+    color: var(--yellow);
+}
+
+.welcome .item:nth-child(4) span {
+    color: var(--black);
+}
+
+.welcome .item:nth-child(5) span {
+    color: var(--black);
+}
+
+.welcome .row>div:last-child {
+    display: none;
+    padding-left: 1.5rem;
+}
+
+.welcome .row>div:last-child a {
+    color: rgb(49, 14, 1);
+}
+
+
+/* why section */
+
+.why .container>p {
+    text-align: center;
+}
+
+.why .item {
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.why .item img {
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* online course */
+
+.online-course {
+    background: linear-gradient(rgb(250, 83, 0), orange), url(officer-fnancial-audit-business-analysis-market-research-product-testing-data-analysis-concept-free-vector.jpg) top no-repeat fixed;
+    color: #fff;
+}
+
+.online-course-form div * {
+    display: block;
+}
+
+.online-course-form select option {
+    color: var(--black);
+}
+
+
+/* skill section */
+
+.skill .row>div {
+    margin: 1.5rem 0;
+}
+
+.skill .img-container {
+    position: relative;
+    display: none;
+}
+
+.skill .img-container::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    z-index: -1;
+    border: 4px solid orange;
+    transition: var(--transition);
+}
+
+.skill .img-container:hover::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+
+/*opputunities*/
+
+.container-oppurtunities {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 15px;
+    margin: 0 auto;
+}
+
+.container-oppurtunities .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    background: #fff;
+    text-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+}
+
+.container-oppurtunities .card .face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-oppurtunities .card .face.face1 {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.container-oppurtunities .card .face.face1 h2 {
+    margin: 0;
+    padding: 0;
+}
+
+.container-oppurtunities .card .face.face2 {
+    background: #111;
+    transition: 0.5s;
+}
+
+.container-oppurtunities .card:nth-child(1) .face.face2 {
+    background: linear-gradient(45deg, #c44b22, #fafa25);
+}
+
+.container-oppurtunities .card:nth-child(2) .face.face2 {
+    background: linear-gradient(45deg, #ccff00, #ea5c05);
+}
+
+.container-oppurtunities .card:nth-child(3) .face.face2 {
+    background: linear-gradient(45deg, #e91e63, #ffeb3b);
+}
+
+.container-oppurtunities .card:hover .face.face2 {
+    height: 60px;
+}
+
+.container-oppurtunities .card .face.face2:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, .1);
+}
+
+.container-oppurtunities .card .face.face2 h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 10em;
+    color: #fff;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container-oppurtunities .card:hover .face.face2 h2 {
+    font-size: 2em;
+}
+
+
+/*end of opputunities*/
+
+
+/*faq*/
+
+.container-faq {
+    margin: 0 40px;
+    max-width: 2000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container-faq h1 {
+    color: #333;
+}
+
+.container-faq .tab {
+    position: relative;
+    background: white;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.container-faq .tab input {
+    appearance: none;
+}
+
+.container-faq .tab label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container-faq .tab label::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s;
+}
+
+.container-faq .tab:hover label::after {
+    color: #333;
+}
+
+.container-faq .tab input:checked~label::after {
+    transform: rotate(135deg);
+    color: #ddd;
+}
+
+.container-faq .tab label h2 {
+    width: 40px;
+    height: 40px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.container-faq .tab input:checked~label h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 8em;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.container-faq .tab:nth-child(2) label h2 {
+    background: linear-gradient(135deg, orange, red);
+}
+
+.container-faq .tab:nth-child(3) label h2 {
+    background: linear-gradient(135deg, orange, red);
+}
+
+.container-faq .tab:nth-child(4) label h2 {
+    background: linear-gradient(135deg, orange, red);
+}
+
+.container-faq .tab label h3 {
+    position: relative;
+    font-weight: 500;
+    color: #333;
+    z-index: 10;
+}
+
+.container-faq .tab input:checked~label h3 {
+    background: white;
+    padding: 2px 10px;
+    color: #333;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.container-faq .tab .content {
+    max-height: 0;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container-faq .tab input:checked~.content {
+    max-height: 100vh;
+}
+
+.container-faq .tab .content p {
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    z-index: 10;
+}
+
+.container-faq .tab input:checked~.content p {
+    color: white;
+}
+
+
+/*end of faq*/
+
+
+/* counter section */
+
+.counter {
+    background: orange;
+    text-align: center;
+    transition: all 0.7s linear;
+    color: #ddd;
+}
+
+.counter .item,
+.counter .item .title-sm h3 {
+    text-align: center!important;
+}
+
+.counter .item {
+    margin: 0.7rem 0;
+    color: #fff;
+    border-radius: 0.6rem;
+    padding-bottom: 1rem;
+}
+
+.counter .item:nth-child(1) {
+    background: var(--cyan);
+}
+
+.counter .item:nth-child(2) {
+    background: var(--magenta);
+}
+
+.counter .item:nth-child(3) {
+    background: var(--yellow);
+}
+
+.counter .item:nth-child(4) {
+    background: var(--black);
+}
+
+.counter .item:nth-child(5) {
+    background: var(--black);
+}
+
+.counter .num {
+    font-size: 2.6rem;
+    font-weight: 900;
+}
+
+
+/* end of counter section */
+
+
+/* footer  */
+
+footer {
+    background: #552000;
+    color: #fff;
+    padding: 4rem 0;
+}
+
+footer h5.ftext {
+    color: white;
+}
+
+footer .row>div {
+    text-align: center;
+    margin-left: 100px;
+}
+
+footer .row>div:nth-child(1) img {
+    width: 50px;
+    margin: 0 auto;
+}
+
+p.ftext {
+    padding: 20px
+}
+
+p.text {
+    padding-right: 100px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+footer div.Copyright p {
+    text-align: center;
+}
+
+footer .row>div:nth-child(1) p {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.footer-social-links li {
+    border: 2px solid #fff;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+}
+
+.footer-social-links li:hover {
+    border-color: darkorange;
+}
+
+.footer-social-links a {
+    color: #fff;
+    transition: var(--transition);
+}
+
+.footer-social-links li:hover a {
+    color: darkorange;
+}
+
+.footer-links a {
+    color: var(--lightBlack);
+    display: block;
+    margin: 0.6rem 0;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--exLight);
+}
+
+.footer-contact-info span {
+    color: var(--lightBlack);
+}
+
+.footer-contact-info div {
+    margin: 0.6rem 0;
+}
+
+.footer-text {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 1rem;
+}
+
+.footer-text span {
+    color: darkorange;
+}
+
+li.nav-item a.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 26px;
+    margin: 0px 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 40px;
+    background: linear-gradient(90deg, orange, red);
+}
+
+.footer .row-container .ftext {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #e3d810;
+}
+
+
+/*Copyright*/
+
+.Copyright p img {
+    width: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <!--nav bar bootstrap-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="icon.png" alt="" srcset=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skill">Why us?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#course">Courses/Internships</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#opportunities">Opportunities</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="button" href="login.html">Register</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--end of nav bar from boot strap-->
+
+        <!--bootstrap slide-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://img.freepik.com/free-vector/collection-young-people-waving-hand_23-2148369786.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <center>
+                            <h1 class="animation bounceInRight" style="animation-delay: 1s">Be one in a Million</h1>
+                            <p class="animation bounceInLeft d-none d-md-block " style="animation-delay: 2s"> </p>
+                            <p class="animation bounceInRight d-none d-md-block " style="animation-delay: 3s"><button type="button" class="btn btn-warning">Learn More</button></p>
+                        </center>
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://img.freepik.com/premium-vector/shared-working-environment-illustration_171919-3.jpg">
+                    <div class="carousel-caption d-none d-md-block">
+                        <center>
+                            <h1 class="animation bounceInRight" style="animation-delay: 1s">Together we make difference</h1>
+                            <p class="animation bounceInRight d-none d-md-block " style="animation-delay: 3s"><button type="button" class="btn btn-warning">Learn More</button></p>
+                        </center>
+
+                    </div>
+
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <!--end of bootstrap slide-->
+
+    </header>
+    <!-- end of header -->
+
+    <!-- welcome section -->
+    <section class="welcome">
+        <div class="container">
+            <div class="title title-md">
+                <h3>you are welcome</h3>
+                <div class="line"></div>
+            </div>
+
+            <div class="row">
+                <div>
+                    <div class="item">
+                        <span><i class = "fas fa-search"></i></span>
+                        <p class="lg-text">Explore</p>
+                    </div>
+                    <div class="item">
+                        <span><i class = "fas fa-user-friends"></i></span>
+                        <p class="lg-text">Faculty</p>
+                    </div>
+                    <div class="item">
+                        <span><i class = "fas fa-award"></i></span>
+                        <p class="lg-text">Courses/Internships</p>
+                    </div>
+                    <div class="item">
+                        <span><i class = "fas fa-book"></i></span>
+                        <p class="lg-text">Resources</p>
+                    </div>
+
+                </div>
+
+                <div>
+                    <div class="title title-sm">
+                        <h3>Feel Free To Ask</h3>
+                    </div>
+                    <p class="lg-text">Discover Baoiam</p>
+                    <a href="#">Find Out More <i class = "fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of welcome section -->
+    <!-- skill section -->
+    <section class="skill" id="skill">
+        <div class="container">
+            <div class="title title-md">
+                <h3>Why Us?</h3>
+                <div class="line"></div>
+            </div>
+            <div class="row">
+                <div>
+                    <div class="title title-sm">
+                        <h3>Why Baoiam</h3>
+                    </div>
+                    <p class="text">Baoiam is an EdTech startup which provides the learning and placement opportunities to various students in the field of engineering, technology, cyber security, AI, IT and academics. Baoiam is a fully-certified platform since 2021,
+                        helping thousands of students through the entire world to achieve their personal and professional goals. It is a platform which provides various courses as well as the opportunities in the field of education and career.</p>
+                </div>
+                <div>
+                    <div class="img-container">
+                        <img src="https://media.licdn.com/dms/image/C4D03AQHvlXWAevvLnA/profile-displayphoto-shrink_800_800/0/1617303536984?e=1681344000&v=beta&t=Y4w7HCPKa6bct-UQqSN2OH7cl1SolVBVc2x0D0tKyIM" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of skill section -->
+
+    <!-- why section -->
+    <section class="why">
+        <div class="container">
+            <div class="title title-md">
+                <h3>top facility</h3>
+                <div class="line"></div>
+            </div>
+            <p class="text">START YOUR CAREER IN BAOIAM</p>
+            <div class="row">
+                <div class="item">
+                    <img src="https://thumbs.dreamstime.com/b/get-guidance-to-put-key-its-place-as-problem-solution-business-concept-vector-illustration-business-solution-guidance-145642786.jpg" alt="">
+                    <h3 class="lg-text">Professional Guidence</h3>
+
+                    <a href="#" class="btn primary-btn"><button type="button" class="btn btn-outline-warning">Learn More</button></a>
+                </div>
+                <div class="item">
+                    <img src="https://www.valamis.com/wp-content/uploads/2022/09/collaborative-learning.png" alt="">
+                    <h3 class="lg-text">Explore Ourselves</h3>
+
+                    <a href="#" class="btn primary-btn"><button type="button" class="btn btn-outline-warning">Learn More</button></a>
+                </div>
+                <div class="item">
+                    <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2021/02/social-media-opportunities-601bc9d146e00.png" alt="">
+                    <h3 class="lg-text">Opportunities</h3>
+                    <a href="#" class="btn primary-btn"><button type="button" class="btn btn-outline-warning">Learn More</button></a>
+                </div>
+            </div>
+    </section>
+    <!-- end of why section -->
+    <!--catogiries-->
+    <div class="title title-md" id="course">
+        <h3>Courses/Internships</h3>
+        <div class="line"></div>
+    </div>
+    <div class="box-area">
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Web Devolpment</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Sales and Marketing</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Product Management</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Data Science & Machine Learning</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Artificial Intelligence</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Content Writer</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Business Management</strong></span>
+            </div>
+        </div>
+        <div class="single-box">
+            <div class="img-area"></div>
+            <div class="img-text">
+                <span class="header-text"><strong>Software Testing</strong></span>
+            </div>
+        </div>
+    </div>
+    <!--end of catogiries-->
+    <!-- online course -->
+    <section class="online-course">
+        <div class="container">
+            <div class="title title-md">
+                <h3>Register Here for Internships/Courses</h3>
+                <div class="line"></div>
+            </div>
+            <form class="online-course-form">
+                <div>
+                    <input type="text" class="form-control" placeholder="Full Name">
+                    <input type="email" class="form-control" placeholder="E-mail">
+                    <select>
+                        <option value = "">Web devolpment</option>
+                        <option value = "">Information Technology</option>
+                        <option value = "">Marketing</option>
+                        <option value = "">HR</option>
+                        <option value = "">Testing</option>
+                        <option value = "">Back end devolpment</option>
+                        <option value = "">Softwware devolpment</option>   
+                    </select>
+                </div>
+                <input type="submit" class="submit-btn" value="Take A Course">
+            </form>
+        </div>
+    </section>
+    <!-- end of online course -->
+    <!--oppurtunities-->
+    <section class="skill" id="opportunities">
+        <div class="container">
+            <div class="title title-md">
+                <h3>opportunities</h3>
+                <div class="line"></div>
+            </div>
+            <div class="container-oppurtunities">
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h2>Gain Knowledge</h2>
+                            <p>Gain practical work experience in areas that complement your personal strengths, interests and educational needs</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>01</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h2>Discover</h2>
+                            <p>Hiring co-op students gives your current employees the opportunity to lead and manage new talent duties</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>02</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <h2>Personal Devolpment</h2>
+                            <p>Have a co-op teacher facilitate entry into a workplace not usually available to students prior to formal training. Confirm career decisions before starting post-secondary education, including apprenticeships</p>
+                        </div>
+                    </div>
+                    <div class="face face2">
+                        <h2>03</h2>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--end of oppurtunities-->
+
+    <!-- FaQ -->
+    <section class="skill" id="FAQ">
+        <div class="container-faq">
+            <h1>Frequently asked Questions?(FAQ)</h1>
+            <div class="tab">
+                <input type="radio" name: "acc" id="acc1">
+                <label for="acc1">
+                    <h2>01</h2>
+                    <h3>How do I apply?</h3>
+                </label>
+                <div class="content">
+                    <p>Baoiam Internship Programme offers students and recent graduates from diverse academic backgrounds the opportunity to gain hands-on experience with through global internship opportunities.</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name: "acc" id="acc2">
+                <label for="acc2">
+                    <h2>02</h2>
+                    <h3>Lost or forgotten your password?</h3>
+                </label>
+                <div class="content">
+                    <p>Resetting a lost or forgotten password · Go Name.com and click Log in in the top right of the navigation. · Click Forgot Username or password?</p>
+                </div>
+            </div>
+            <div class="tab">
+                <input type="radio" name: "acc" id="acc3">
+                <label for="acc3">
+                    <h2>03</h2>
+                    <h3>How can  make change to my application?</h3>
+                </label>
+                <div class="content">
+                    <p>Once an application or writing supplement has been submitted to our organization, you cannot make any changes to that application (just as if you had dropped it in the mail), and we are not permitted to make changes on your behalf.
+                        In general, the Common Application is designed to be completed one time and submitted to organization at once, or over a period of time. If you need to change information on a submitted application, you must contact the Hr office
+                        directly to ask how they would like you to proceed.</p>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!-- Faq -->
+
+    <!-- footer -->
+    <footer>
+        <div class="row container">
+            <div>
+                <img src="baoiam.png" alt="">
+                <p class="ftext">Baoiam is a fully-certified platform since 2020, helping millions of students through the entire world to achieve their personal and professional goals.</p>
+                <ul class="footer-social-links">
+                    <li class="flex">
+                        <a href="#"><i class = "fab fa-facebook-f"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="#"><i class = "fab fa-twitter"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="#"><i class = "fab fa-instagram"></i></a>
+                    </li>
+                    <li class="flex">
+                        <a href="#"><i class = "fab fa-google"></i></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h5 class="ftext">Baoiam</h5>
+                <div class="footer-links">
+                    <a href="#">Registration</a>
+                    <a href="#">Popular Courses</a>
+                    <a href="#">Academic Schedule</a>
+                    <a href="#">Extra Facilities</a>
+                    <a href="#">Events</a>
+                    <a href="#">For Teams</a>
+                    <a href="#">Base Camp</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+            <div>
+                <h5 class="ftext">Internship/Courses</h5>
+                <div class="footer-links">
+                    <a href="#">Business Administration</a>
+                    <a href="#">Arts & Humanities</a>
+                    <a href="#">Science & Technology</a>
+                    <a href="#">Economics & Finance</a>
+                    <a href="#">Data Science | Master of Science</a>
+                    <a href="#">Data Science | Master's Degree</a>
+                    <a href="#">Digital Marketing Job Linked | Bootcamp Certification
+                </a>
+                </div>
+            </div>
+            <div>
+                <h5 class="ftext">For college Students</h5>
+                <div class="footer-links">
+                    <a href="#">Digital Marketing | Certification Program</a>
+                    <a href="#">Data Science & Analytics | Certification Program</a>
+                    <a href="#">Full Stack Development | Certification Program</a>
+                    <a href="#">Business Analytics | Certification Program</a>
+                    <a href="#">Artificial Intelligence & Machine Learning | Certification Program</a>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="Copyright">
+            <p>
+                <p>&copy; 2023 Baoiam.com</p>
+            </p>
+        </div>
+
+    </footer>
+
+
+
+    <!-- end of footer -->
+
+
+    <!-- jquery cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+    <!--Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+
+</html>
